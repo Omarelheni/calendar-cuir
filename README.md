@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Calendar  Cuir
+This project is an appointment management application featuring a calendar component, developed using the React framework. The application allows users to schedule and manage appointments or meetings efficiently. The calendar provides an intuitive interface for viewing and interacting with scheduled events, making it easy for users to organize their time effectively
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Requirements:
 
-## Available Scripts
+In order to get the project running you need to install:
 
-In the project directory, you can run: 
+- [Docker](https://docs.docker.com/get-docker/).
 
-### `npm start`
+#### Docker:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setting the Project Locally:
 
-### `npm test`
+#### Cloning the project:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once you have all the needed requirements installed, clone the project:
 
-### `npm run build`
+``` bash
+git clone GitURL
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Configure .env file:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Before you can run the project you need to set the envirment varibles:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+``` env
+NODE_ENV=development # development or production
 
-### `npm run eject`
+REACT_APP_API_BASE_URL=http://0.0.0.0:5000 # backend base url
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Run the Project in development env:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+to run the project type:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+``` bash
+docker-compose up --build -d
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Check 0.0.0.0:3000 on your browser!
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Run the Project in production
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+to build the project type:
 
-### Code Splitting
+``` bash
+docker-compose -f docker-compose.build.yaml up --build -d
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+That's it..
