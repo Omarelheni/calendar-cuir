@@ -18,16 +18,14 @@ Docker is an open platform for developing, shipping, and running applications. D
 Once you have all the needed requirements installed, clone the project:
 
 ``` bash
-git clone GitURL
+git clone git@github.com:Omarelheni/calendar-cuir.git
 ```
 
 #### Configure .env file:
 
-Before you can run the project you need to set the envirment varibles:
+Before you can run the project you need to set the env variables:
 
 ``` env
-NODE_ENV=development # development or production
-
 REACT_APP_API_BASE_URL=http://0.0.0.0:5000 # backend base url
 ```
 
